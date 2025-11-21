@@ -8,7 +8,7 @@
 
 ## Faza 2: Backend i Baza Danych
 - [x] Konfiguracja Entity Framework i modelu danych
-- [ ] Wykonanie migracji bazy danych
+- [x] Wykonanie migracji bazy danych
 - [ ] Stworzenie endpointu API do zapisywania logów
 - [x] Konfiguracja polityki CORS
 
