@@ -39,6 +39,6 @@
 - [ ] Refaktoryzacja kodu i usunięcie logów deweloperskich
 
 ## Zasoby Startowe
-- [ ] Plik toru (`raceTrack.json`)
-- [ ] Grafika pojazdu (`.svg`)
-- [ ] Przykładowy plik trasy do testów (GeoJSON)
+- [x] Plik toru (`raceTrack.json`)
+- [x] Grafika pojazdu (`fastRaceCar.svg`)
+- [x] Przykładowy plik trasy do testów (GeoJSON) (`lap1.json`, `lap2.json`)
