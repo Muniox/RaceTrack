@@ -1,16 +1,16 @@
 ﻿# Plan Realizacji Zadania Rekrutacyjnego - Web Dev (GIS)
 
 ## Faza 1: Przygotowanie Środowiska
-- [ ] Uruchomienie bazy danych (PostgreSQL)
-- [ ] Inicjalizacja projektu Backend (.NET Web API)
-- [ ] Inicjalizacja projektu Frontend (React + TypeScript)
-- [ ] Instalacja wymaganych bibliotek (OpenLayers, SASS)
+- [x] Uruchomienie bazy danych (PostgreSQL)
+- [x] Inicjalizacja projektu Backend (.NET Web API)
+- [x] Inicjalizacja projektu Frontend (React + TypeScript)
+- [x] Instalacja wymaganych bibliotek (OpenLayers, SASS)
 
 ## Faza 2: Backend i Baza Danych
-- [ ] Konfiguracja Entity Framework i modelu danych
+- [x] Konfiguracja Entity Framework i modelu danych
 - [ ] Wykonanie migracji bazy danych
 - [ ] Stworzenie endpointu API do zapisywania logów
-- [ ] Konfiguracja polityki CORS
+- [x] Konfiguracja polityki CORS
 
 ## Faza 3: Konfiguracja Mapy (Frontend)
 - [ ] Implementacja komponentu mapy OpenLayers
