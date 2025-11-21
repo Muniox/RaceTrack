@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="RaceTrack.Api/RaceTrack.Api.csproj" />
+  <Project Path="RaceTrack.Application/RaceTrack.Application.csproj" />
+  <Project Path="RaceTrack.Domain/RaceTrack.Domain.csproj" />
+  <Project Path="RaceTrack.Infrastructure/RaceTrack.Infrastructure.csproj" />
+</Solution>
