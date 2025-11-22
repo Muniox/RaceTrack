@@ -43,15 +43,14 @@ Budowa API do logowania zdarzeń.
 ## Faza 3: Frontend - Mapa i Tor (OpenLayers)
 Wyświetlenie mapy i statycznych danych.
 
-- [ ] Setup Mapy:
+- [x] Setup Mapy:
     - Stwórz komponent `MapWrapper.tsx`.
     - Zainicjuj obiekt `new Map()` z `View` i warstwą kafelkową (np. OSM).
     - Pamiętaj o stylach CSS dla kontenera mapy (musi mieć wysokość!).
-- [ ] Wczytanie Toru (`raceTrack.json`):
+- [x] Wczytanie Toru (`raceTrack.json`):
     - Zaimportuj plik GeoJSON z torem (wielokąt).
     - Stwórz `VectorLayer` i `VectorSource`.
     - Wczytaj dane z `raceTrack.json` do źródła.
-    - Uwaga: Sprawdź projekcję! OpenLayers to `EPSG:3857`, GeoJSON często to `EPSG:4326`. Użyj `dataProjection` i `featureProjection`.
 
 ---
 
@@ -111,6 +110,5 @@ Dbałość o detale.
     - Sprawdź, czy panel boczny nie zasłania mapy na telefonie.
 - [ ] Clean Code:
     - Usuń `console.log`.
-    - Wydziel logikę mapy do custom hooka (np. `useOpenLayers`).
 
 ---

@@ -13,9 +13,9 @@
 - [x] Konfiguracja polityki CORS
 
 ## Faza 3: Konfiguracja Mapy (Frontend)
-- [ ] Implementacja komponentu mapy OpenLayers
-- [ ] Ustawienie widoku startowego i warstwy kafelkowej
-- [ ] Wczytanie i wyświetlenie statycznego toru (GeoJSON)
+- [x] Implementacja komponentu mapy OpenLayers
+- [x] Ustawienie widoku startowego i warstwy kafelkowej
+- [x] Wczytanie i wyświetlenie statycznego toru (GeoJSON)
 
 ## Faza 4: Interfejs Użytkownika (UI)
 - [ ] Stworzenie układu strony (mapa + panel boczny)
