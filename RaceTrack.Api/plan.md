@@ -57,11 +57,11 @@ Wyświetlenie mapy i statycznych danych.
 ## Faza 4: Interfejs Użytkownika (UI) & Import Danych
 Interakcja z użytkownikiem.
 
-- [ ] Layout: Stwórz prosty layout (Sidebar na kontrolki + Główny obszar na mapę).
-- [ ] Inputy:
+- [x] Layout: Stwórz prosty layout (Sidebar na kontrolki + Główny obszar na mapę).
+- [x] Inputy:
     - Pole tekstowe dla opóźnienia (ms).
     - Przyciski "Start" i "Stop".
-- [ ] Import Trasy (Drag & Drop / File Input):
+- [x] Import Trasy (Drag & Drop / File Input):
     - Dodaj obsługę wczytywania pliku `.json` z lokalnego dysku.
     - Rozparsuj plik i wyciągnij współrzędne punktów trasy.
     - (Opcjonalnie) Wyświetl trasę na mapie jako linię pomocniczą, żeby widzieć, gdzie auto pojedzie.

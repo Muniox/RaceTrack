@@ -1,0 +1,207 @@
+@use "sass:color";
+
+$sidebar-width: 320px;
+$sidebar-bg: #1a1a2e;
+$sidebar-bg-light: #16213e;
+$primary-color: #0f3460;
+$accent-color: #e94560;
+$success-color: #00d26a;
+$text-color: #eaeaea;
+$text-muted: #a0a0a0;
+$border-radius: 8px;
+$transition: all 0.3s ease;
+
+.sidebar {
+  width: $sidebar-width;
+  min-width: $sidebar-width;
+  height: 100%;
+  background: $sidebar-bg;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+
+  &__header {
+    padding: 24px 20px;
+    background: linear-gradient(135deg, $primary-color, $sidebar-bg-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    background: linear-gradient(90deg, $text-color, $accent-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__subtitle {
+    font-size: 0.875rem;
+    color: $text-muted;
+  }
+
+  &__section {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &__section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $text-muted;
+    margin-bottom: 16px;
+  }
+
+  &__control-group {
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    color: $text-color;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background: $sidebar-bg-light;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    color: $text-color;
+    transition: $transition;
+    outline: none;
+
+    &:focus {
+      border-color: $accent-color;
+      box-shadow: 0 0 0 3px rgba($accent-color, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23eaeaea' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+
+    option {
+      background: $sidebar-bg-light;
+      color: $text-color;
+      padding: 8px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transition;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    &--start {
+      background: linear-gradient(135deg, $success-color, color.adjust($success-color, $lightness: -10%));
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba($success-color, 0.4);
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+      }
+    }
+
+    &--stop {
+      background: linear-gradient(135deg, $accent-color, color.adjust($accent-color, $lightness: -10%));
+      color: #fff;
+
+      &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba($accent-color, 0.4);
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__file-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba($success-color, 0.1);
+    border-radius: $border-radius;
+    border: 1px solid rgba($success-color, 0.3);
+  }
+
+  &__file-icon {
+    color: $success-color;
+    font-weight: bold;
+  }
+
+  &__file-name {
+    font-size: 0.875rem;
+    color: $text-color;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// Responsywność
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 40vh;
+    order: 2;
+
+    &__header {
+      padding: 16px;
+    }
+
+    &__section {
+      padding: 16px;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+}

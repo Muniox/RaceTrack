@@ -18,9 +18,9 @@
 - [x] Wczytanie i wyświetlenie statycznego toru (GeoJSON)
 
 ## Faza 4: Interfejs Użytkownika (UI)
-- [ ] Stworzenie układu strony (mapa + panel boczny)
-- [ ] Dodanie kontrolek sterujących (Start, Stop, Input opóźnienia)
-- [ ] Implementacja mechanizmu importu pliku z trasą
+- [x] Stworzenie układu strony (mapa + panel boczny)
+- [x] Dodanie kontrolek sterujących (Start, Stop, Input opóźnienia)
+- [x] Implementacja mechanizmu importu pliku z trasą
 
 ## Faza 5: Logika Animacji i Kolizji
 - [ ] Dodanie warstwy wektorowej dla pojazdu
@@ -34,8 +34,8 @@
 - [ ] Walidacja wczytywanych plików i blokada przycisków
 
 ## Faza 7: Stylowanie i Finalizacja
-- [ ] Stylowanie komponentów przy użyciu SASS
-- [ ] Poprawa responsywności interfejsu
+- [x] Stylowanie komponentów przy użyciu SASS
+- [x] Poprawa responsywności interfejsu
 - [ ] Refaktoryzacja kodu i usunięcie logów deweloperskich
 
 ## Zasoby Startowe

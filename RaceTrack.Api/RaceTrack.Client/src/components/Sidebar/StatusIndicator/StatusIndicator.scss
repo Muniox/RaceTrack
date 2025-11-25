@@ -1,0 +1,72 @@
+@use "sass:color";
+
+$sidebar-bg-light: #16213e;
+$success-color: #00d26a;
+$text-muted: #a0a0a0;
+$border-radius: 8px;
+$transition: all 0.3s ease;
+
+.sidebar {
+  &__section {
+    &--status {
+      margin-top: auto;
+      border-bottom: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &__section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $text-muted;
+    margin-bottom: 16px;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: $sidebar-bg-light;
+    border-radius: $border-radius;
+
+    &--running {
+      .sidebar__status-dot {
+        background: $success-color;
+        animation: pulse 1.5s infinite;
+      }
+
+      .sidebar__status-text {
+        color: $success-color;
+      }
+    }
+  }
+
+  &__status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $text-muted;
+    transition: $transition;
+  }
+
+  &__status-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: $transition;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}

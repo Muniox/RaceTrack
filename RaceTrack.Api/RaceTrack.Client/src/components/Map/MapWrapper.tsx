@@ -1,8 +1,10 @@
 import {type JSX, useEffect, useRef} from 'react';
 import Map from 'ol/Map';
 import 'ol/ol.css';
+
 import {createTrackLayer, createTrackSource} from "./layers.ts";
 import {createMap} from "./map.ts";
+import './MapWrapper.scss';
 
 const MapWrapper = () : JSX.Element => {
   // ref do diva mapy

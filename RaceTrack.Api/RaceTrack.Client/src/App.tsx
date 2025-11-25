@@ -1,9 +1,14 @@
-import MapWrapper from './components/Map/MapWrapper.tsx';
+import {
+  MapWrapper, 
+  Sidebar
+} from './components';
 import './App.scss';
+
 
 function App() {
   return (
     <div className="app">
+      <Sidebar />
       <MapWrapper />
     </div>
   );
