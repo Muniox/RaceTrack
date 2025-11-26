@@ -40,3 +40,23 @@ Finalny produkt powinien składać się z aplikacji w przeglądarce, która wyś
 
 * [Obliczanie azymutu (AGH)](https://brasil.cel.agh.edu.pl/~11sjjurek/azymut.html)
 * [Dokumentacja OpenLayers](https://openlayers.org/en/latest/apidoc/)
+
+
+## Adnotacje
+
+### Interpretacja UTC+2 w modelu danych
+
+**Problem:**
+PostgreSQL z typem `timestamp with time zone` nie akceptuje DateTime z `Kind=Unspecified` (powstaje przy konwersji UTC na lokalny czas). 
+Błąd: `Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported.`
+
+**Rozważane rozwiązania:**
+1. ❌ Konwersja na UTC+2 w Repository - powoduje błąd PostgreSQL
+2. ✅ Zapisywanie UTC w bazie (wybrane rozwiązanie)
+3. ⚠️ Zmiana typu kolumny na `timestamp without time zone` - wymaga migracji, komplikuje operacje na datach
+
+**Implementacja:**
+- **W bazie:** przechowywany jest czas w UTC (`timestamp with time zone`)
+- **W kodzie:** `DateTime.UtcNow` zapisywany bezpośrednio bez konwersji
+- **Konwersja na UTC+2:** wykonywana w warstwie prezentacji (API response DTO) lub na frontendzie przy wyświetlaniu
+- **Zalety:** spójność danych, zgodność z PostgreSQL, ułatwione operacje na datach, obsługa różnych stref czasowych

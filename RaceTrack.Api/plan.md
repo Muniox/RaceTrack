@@ -33,7 +33,7 @@ Budowa API do logowania zdarzeń.
 - [ ] Rejestracja Repozytorium w DI (`ServiceCollectionExtensions.cs`):
     - Dodaj `services.AddScoped<IRaceEventLogRepository, RaceEventRepository>()`.
 - [x] Migracje: Wykonane (`20251121144126_Init`).
-- [ ] API Endpoint (`RaceTrack.Api/Controllers/RaceTrackController.cs`):
+- [x] API Endpoint (`RaceTrack.Api/Controllers/RaceTrackController.cs`):
     - Dodaj metodę `POST` przyjmującą dane i zapisującą je w bazie przez repozytorium.
 - [x] CORS (`RaceTrack.Api/Extensions/WebApplicationBuilderExtensions.cs`):
     - Skonfigurowano dla `localhost:5173`.
