@@ -7,11 +7,11 @@ namespace RaceTrack.Application.RaceEvents.Commands.CreateRaceEventLog
         public CreateRaceEventLogValidator()
         {
             RuleFor(x => x.PositionX)
-                .NotEmpty()
+                .NotNull()
                 .WithMessage("Position X is required.");
 
             RuleFor(x => x.PositionY)
-                .NotEmpty()
+                .NotNull()
                 .WithMessage("Position Y is required.");
         }
     }

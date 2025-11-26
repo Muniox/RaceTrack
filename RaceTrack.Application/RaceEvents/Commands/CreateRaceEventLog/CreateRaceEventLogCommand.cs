@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RaceTrack.Application.RaceEvents.Commands.CreateRaceEventLog
 {
     public record CreateRaceEventLogCommand(
-        double PositionX,
-        double PositionY
+        double? PositionX,
+        double? PositionY
         ) : IRequest<int>;
 }

@@ -22,8 +22,8 @@ namespace RaceTrack.Application.RaceEvents.Commands.CreateRaceEventLog
         {
             var raceEventLog = new RaceEventLog
             {
-                PositionX = request.PositionX,
-                PositionY = request.PositionY,
+                PositionX = request.PositionX!.Value,
+                PositionY = request.PositionY!.Value,
                 Timestamp = DateTime.UtcNow
             };
 
