@@ -30,7 +30,7 @@ Budowa API do logowania zdarzeń.
 - [x] Connection String (`appsettings.json`):
     - `Host=localhost;Port=5432;Database=RaceTrackDb;Username=admin;Password=secretpassword`
 - [x] Rejestracja DbContext (`RaceTrack.Infrastructure/Extensions/ServiceCollectionExtensions.cs`).
-- [ ] Rejestracja Repozytorium w DI (`ServiceCollectionExtensions.cs`):
+- [x] Rejestracja Repozytorium w DI (`ServiceCollectionExtensions.cs`):
     - Dodaj `services.AddScoped<IRaceEventLogRepository, RaceEventRepository>()`.
 - [x] Migracje: Wykonane (`20251121144126_Init`).
 - [x] API Endpoint (`RaceTrack.Api/Controllers/RaceTrackController.cs`):
