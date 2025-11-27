@@ -8,11 +8,11 @@ interface StatusIndicatorProps {
 
 const StatusIndicator = ({ isRunning }: StatusIndicatorProps): JSX.Element => {
   return (
-    <div className="sidebar__section sidebar__section--status">
-      <h2 className="sidebar__section-title">Status</h2>
-      <div className={`sidebar__status ${isRunning ? "sidebar__status--running" : ""}`}>
-        <span className="sidebar__status-dot"></span>
-        <span className="sidebar__status-text">
+    <div className="status-indicator">
+      <h2 className="status-indicator__title">Status</h2>
+      <div className={`status-indicator__status ${isRunning ? "status-indicator__status--running" : ""}`}>
+        <span className="status-indicator__dot"></span>
+        <span className="status-indicator__text">
           {isRunning ? "Animacja w toku" : "Zatrzymano"}
         </span>
       </div>

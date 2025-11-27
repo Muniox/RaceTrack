@@ -1,21 +1,12 @@
-@use "sass:color";
+@use "../variables" as *;
 
-$sidebar-bg-light: #16213e;
-$success-color: #00d26a;
-$text-muted: #a0a0a0;
-$border-radius: 8px;
-$transition: all 0.3s ease;
+.status-indicator {
+  padding: 20px;
+  margin-top: auto;
+  border-bottom: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 
-.sidebar {
-  &__section {
-    &--status {
-      margin-top: auto;
-      border-bottom: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-  }
-
-  &__section-title {
+  &__title {
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -33,18 +24,18 @@ $transition: all 0.3s ease;
     border-radius: $border-radius;
 
     &--running {
-      .sidebar__status-dot {
+      .status-indicator__dot {
         background: $success-color;
         animation: pulse 1.5s infinite;
       }
 
-      .sidebar__status-text {
+      .status-indicator__text {
         color: $success-color;
       }
     }
   }
 
-  &__status-dot {
+  &__dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -52,7 +43,7 @@ $transition: all 0.3s ease;
     transition: $transition;
   }
 
-  &__status-text {
+  &__text {
     font-size: 0.875rem;
     font-weight: 500;
     transition: $transition;
