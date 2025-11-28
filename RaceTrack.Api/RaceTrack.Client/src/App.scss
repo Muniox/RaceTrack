@@ -1,7 +1,67 @@
+// Sidebar color variables
+$sidebar-bg: #1a1a2e;
+$sidebar-bg-light: #16213e;
+$accent-color: #e94560;
+$success-color: #00d26a;
+$text-color: #eaeaea;
+$border-radius: 8px;
+
 .app {
   width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+// Custom Toast styles matching sidebar
+.Toastify__toast {
+  background: linear-gradient(135deg, $sidebar-bg, $sidebar-bg-light) !important;
+  color: $text-color !important;
+  border-radius: $border-radius !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-family: inherit !important;
+}
+
+.Toastify__toast-body {
+  color: $text-color !important;
+  font-size: 0.875rem !important;
+}
+
+.Toastify__progress-bar {
+  background: $accent-color !important;
+}
+
+.Toastify__toast--success {
+  .Toastify__progress-bar {
+    background: $success-color !important;
+  }
+}
+
+.Toastify__toast--warning {
+  .Toastify__progress-bar {
+    background: #ffc107 !important;
+  }
+}
+
+.Toastify__toast--error {
+  .Toastify__progress-bar {
+    background: $accent-color !important;
+  }
+}
+
+.Toastify__toast--info {
+  .Toastify__progress-bar {
+    background: #3498db !important;
+  }
+}
+
+.Toastify__close-button {
+  color: $text-color !important;
+  opacity: 0.7 !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 
 // Responsywność - zmiana układu na kolumnowy dla mniejszych ekranów
