@@ -1,17 +1,30 @@
-import { useState, type JSX } from "react";
+import type { JSX } from "react";
 
 import "./Sidebar.scss";
-import ControlPanel from "./ControlPanel/ControlPanel";
-import RouteSelector from "./RouteSelector/RouteSelector";
-import StatusIndicator from "./StatusIndicator/StatusIndicator";
+import ControlPanel from "./ControlPanel";
+import RouteSelector from "./RouteSelector";
+import StatusIndicator from "./StatusIndicator";
+import { useAnimation } from "../../context";
 
 const Sidebar = (): JSX.Element => {
-  const [isRunning, setIsRunning] = useState(false);
-  const [delay, setDelay] = useState<number>(500);
-  const [selectedRoute, setSelectedRoute] = useState<string>("");
+  const {
+    isRunning,
+    delay,
+    selectedRoute,
+    currentIndex,
+    totalPoints,
+    setDelay,
+    setSelectedRoute,
+    start,
+    stop,
+  } = useAnimation();
 
   const handleStartStop = () => {
-    setIsRunning((prev) => !prev);
+    if (isRunning) {
+      stop();
+    } else {
+      start();
+    }
   };
 
   const handleDelayChange = (value: number) => {
@@ -43,7 +56,11 @@ const Sidebar = (): JSX.Element => {
         disabled={!selectedRoute}
       />
 
-      <StatusIndicator isRunning={isRunning} />
+      <StatusIndicator 
+        isRunning={isRunning} 
+        currentIndex={currentIndex}
+        totalPoints={totalPoints}
+      />
     </aside>
   );
 };

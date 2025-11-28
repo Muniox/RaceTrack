@@ -1,9 +1,16 @@
 import {type JSX, useEffect, useRef} from 'react';
 import Map from 'ol/Map';
 import 'ol/ol.css';
+import type { Polygon } from 'ol/geom';
 
-import {createTrackLayer, createTrackSource} from "./layers.ts";
+import {
+  createTrackLayer, 
+  createTrackSource,
+  createVehicleLayer,
+  resetVehicleLayer
+} from "./layers";
 import {createMap} from "./map.ts";
+import { useAnimation } from '../../context';
 import './MapWrapper.scss';
 
 const MapWrapper = () : JSX.Element => {
@@ -11,16 +18,19 @@ const MapWrapper = () : JSX.Element => {
   const mapRef = useRef<HTMLDivElement>(null);
 
   // ref do instancji mapy (będzie potrzebny aby mieć dostęp z zewnątrz komponentu)
-  const mapInstanceRef = useRef<Map | null>(null);  
+  const mapInstanceRef = useRef<Map | null>(null);
+  
+  const { setTrackPolygon } = useAnimation();
 
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
 
     const trackSource = createTrackSource();
     const trackLayer = createTrackLayer(trackSource);
-    const map = createMap(mapRef, trackLayer);
+    const vehicleLayer = createVehicleLayer();
+    const map = createMap(mapRef, trackLayer, vehicleLayer);
     
-    // Po załadowaniu toru, wycentruj mapę na torze
+    // Po załadowaniu toru, wycentruj mapę na torze i przekaż polygon do contextu
     trackSource.once('change', () => {
       if (trackSource.getState() === 'ready') {
         const extent = trackSource.getExtent();
@@ -28,6 +38,15 @@ const MapWrapper = () : JSX.Element => {
           padding: [50, 50, 50, 50],
           maxZoom: 17,
         });
+
+        // Pobierz geometrię toru (polygon) dla detekcji kolizji
+        const features = trackSource.getFeatures();
+        if (features.length > 0) {
+          const geometry = features[0].getGeometry();
+          if (geometry && geometry.getType() === 'Polygon') {
+            setTrackPolygon(geometry as Polygon);
+          }
+        }
       }
     });
 
@@ -38,8 +57,10 @@ const MapWrapper = () : JSX.Element => {
     return () => {
       map.setTarget(undefined);
       mapInstanceRef.current = null;
+      setTrackPolygon(null);
+      resetVehicleLayer();
     };
-  }, [] /** nie obserwujemy niczego, ponieważ nasza mapa jest inicjalizowana tylko raz (ngOnInit) */);
+  }, [setTrackPolygon] /** nie obserwujemy niczego, ponieważ nasza mapa jest inicjalizowana tylko raz (ngOnInit) */);
 
   return <div ref={mapRef} className="map-container" />;
 };

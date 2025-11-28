@@ -16,13 +16,14 @@ const view = new View({
 })
 
 // Inicjalizacja mapy, którą przypiszemy do instancji mapy
-export const createMap = (mapRef: RefObject<HTMLDivElement | null>, trackLayer: VectorLayer) => new Map({
+export const createMap = (mapRef: RefObject<HTMLDivElement | null>, trackLayer: VectorLayer, vehicleLayer: VectorLayer) => new Map({
     target: mapRef.current ?? undefined,
     layers: [
         new TileLayer({
             source: new OSM(),
         }),
         trackLayer, // nasz tor
+        vehicleLayer, // pojazd
     ],
     view: view,
 });

@@ -48,6 +48,31 @@
     font-weight: 500;
     transition: $transition;
   }
+
+  &__progress {
+    margin-top: 12px;
+  }
+
+  &__progress-bar {
+    height: 6px;
+    background: $sidebar-bg-light;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, $primary-color, $primary-hover);
+    transition: width 0.1s ease-out;
+  }
+
+  &__progress-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: $text-muted;
+    text-align: center;
+  }
 }
 
 @keyframes pulse {

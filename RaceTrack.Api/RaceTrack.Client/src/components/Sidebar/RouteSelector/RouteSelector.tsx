@@ -17,14 +17,6 @@ const RouteSelector = ({
   const handleRouteChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const routeId = e.target.value;
     onRouteChange(routeId);
-
-    if (routeId) {
-      const route = AVAILABLE_ROUTES.find((r) => r.id === routeId);
-      if (route) {
-        // TODO: Załaduj trasę z pliku
-        console.log("Wybrano trasę:", route.name, route.path);
-      }
-    }
   };
 
   const selectedRouteName = AVAILABLE_ROUTES.find(
