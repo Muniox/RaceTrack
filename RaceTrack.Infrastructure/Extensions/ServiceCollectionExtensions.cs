@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using RaceTrack.Domain.IRepositories;
+using RaceTrack.Infrastructure.Persistence;
+using RaceTrack.Infrastructure.Repositories;
 
 namespace RaceTrack.Infrastructure.Extensions
 {
@@ -10,7 +11,15 @@ namespace RaceTrack.Infrastructure.Extensions
     {
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<RaceTrackDbContext>(options =>
+            {
+                options.UseNpgsql(connectionString);
+                // .EnableSensitiveDataLogging();
+            });
 
+            // Rejestracja Repository
+            services.AddScoped<IRaceEventLogRepository, RaceEventRepository>();
         }
     }
 }

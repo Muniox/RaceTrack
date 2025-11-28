@@ -1,8 +1,8 @@
-# Zadanie testowe – Web Dev
+# Zadanie testowe â€“ Web Dev
 
-Zadaniem jest napisanie prostej aplikacji webowej, której celem bêdzie odczytywanie oraz wyœwietlanie danych przestrzennych z pliku, kontrola przeciêcia siê obiektów oraz œledzenie aktywnego obiektu.
+Zadaniem jest napisanie prostej aplikacji webowej, ktÃ³rej celem bÄ™dzie odczytywanie oraz wyÅ›wietlanie danych przestrzennych z pliku, kontrola przeciÄ™cia siÄ™ obiektÃ³w oraz Å›ledzenie aktywnego obiektu.
 
-Finalny produkt powinien sk³adaæ siê z aplikacji w przegl¹darce, która wyœwietli mapê, naniesie na ni¹ dane wejœciowe oraz pozwoli u¿ytkownikowi na edycjê prêdkoœci zmiany aktywnego obiektu.
+Finalny produkt powinien skÅ‚adaÄ‡ siÄ™ z aplikacji w przeglÄ…darce, ktÃ³ra wyÅ›wietli mapÄ™, naniesie na niÄ… dane wejÅ›ciowe oraz pozwoli uÅ¼ytkownikowi na edycjÄ™ prÄ™dkoÅ›ci zmiany aktywnego obiektu.
 
 ## Technologie
 
@@ -17,26 +17,46 @@ Finalny produkt powinien sk³adaæ siê z aplikacji w przegl¹darce, która wyœwietli
 
 ### Frontend
 
-* **Stworzenie mapy:** U¿yj biblioteki OpenLayers do stworzenia mapy.
-* **UI:** Interfejs aplikacji powinien zawieraæ przycisk Start/Stop, textbox z mo¿liwoœci¹ wpisania liczby ca³kowitej (opóŸnienie zmiany pozycji) oraz opcjê umo¿liwiaj¹c¹ import GeoJSON-a.
-* **Wczytanie toru na mapê:** Za³aduj na mapê dane poligonowe z pliku GeoJSON (`raceTrack.json`), który reprezentuje przebieg nawierzchni toru wyœcigowego.
-* **Wczytanie pliku GeoJSON:** U¿ytkownik powinien mieæ mo¿liwoœæ wczytania pliku GeoJSON z danymi punktowymi do aplikacji. Mo¿liwe powinno byæ wczytanie pliku przez przeci¹gniêcie i upuszczenie (Drag & Drop) albo przez wybranie pliku z listy.
-* **Animacja:** Po wpisaniu wartoœci opóŸnienia (w milisekundach) i klikniêciu przycisku "Start", na mapie powinna siê pojawiæ ikonka (`fastRaceCar.svg`), która bêdzie przechodziæ z punktu na punkt z okreœlonym opóŸnieniem. Ikona powinna byæ skierowana w kierunku jazdy, a animacja powinna siê zatrzymaæ po klikniêciu przycisku "Stop".
-* **Detekcja pozycji:** Jeœli animowany punkt znajdzie siê poza obrêbem toru lub w jego œrodku, aplikacja powinna wyœwietliæ powiadomienie i zapisaæ je do bazy danych.
+* **Stworzenie mapy:** UÅ¼yj biblioteki OpenLayers do stworzenia mapy.
+* **UI:** Interfejs aplikacji powinien zawieraÄ‡ przycisk Start/Stop, textbox z moÅ¼liwoÅ›ciÄ… wpisania liczby caÅ‚kowitej (opÃ³Åºnienie zmiany pozycji) oraz opcjÄ™ umoÅ¼liwiajÄ…cÄ… import GeoJSON-a.
+* **Wczytanie toru na mapÄ™:** ZaÅ‚aduj na mapÄ™ dane poligonowe z pliku GeoJSON (`raceTrack.json`), ktÃ³ry reprezentuje przebieg nawierzchni toru wyÅ›cigowego.
+* **Wczytanie pliku GeoJSON:** UÅ¼ytkownik powinien mieÄ‡ moÅ¼liwoÅ›Ä‡ wczytania pliku GeoJSON z danymi punktowymi do aplikacji. MoÅ¼liwe powinno byÄ‡ wczytanie pliku przez przeciÄ…gniÄ™cie i upuszczenie (Drag & Drop) albo przez wybranie pliku z listy.
+* **Animacja:** Po wpisaniu wartoÅ›ci opÃ³Åºnienia (w milisekundach) i klikniÄ™ciu przycisku "Start", na mapie powinna siÄ™ pojawiÄ‡ ikonka (`fastRaceCar.svg`), ktÃ³ra bÄ™dzie przechodziÄ‡ z punktu na punkt z okreÅ›lonym opÃ³Åºnieniem. Ikona powinna byÄ‡ skierowana w kierunku jazdy, a animacja powinna siÄ™ zatrzymaÄ‡ po klikniÄ™ciu przycisku "Stop".
+* **Detekcja pozycji:** JeÅ›li animowany punkt znajdzie siÄ™ poza obrÄ™bem toru lub w jego Å›rodku, aplikacja powinna wyÅ›wietliÄ‡ powiadomienie i zapisaÄ‡ je do bazy danych.
 
 ### Backend
 
-* **Model danych:** Stwórz model danych, który bêdzie przechowywaæ informacje o pozycji, które wysz³y poza obrêb stadionu lub znalaz³y siê w jego œrodku, wraz z czasem wyjœcia (UTC+2).
-* **API Endpoint:** Stwórz endpoint, który pozwoli na zapisanie tych danych do bazy danych PostgreSQL.
-* **Integracja z Entity Framework Core:** Skonfiguruj Entity Framework Core, aby zarz¹dzaæ zapisem danych do bazy PostgreSQL.
+* **Model danych:** StwÃ³rz model danych, ktÃ³ry bÄ™dzie przechowywaÄ‡ informacje o pozycji, ktÃ³re wyszÅ‚y poza obrÄ™b stadionu lub znalazÅ‚y siÄ™ w jego Å›rodku, wraz z czasem wyjÅ›cia (UTC+2).
+* **API Endpoint:** StwÃ³rz endpoint, ktÃ³ry pozwoli na zapisanie tych danych do bazy danych PostgreSQL.
+* **Integracja z Entity Framework Core:** Skonfiguruj Entity Framework Core, aby zarzÄ…dzaÄ‡ zapisem danych do bazy PostgreSQL.
 
 ### Dodatkowe
 
-* **Stylowanie:** U¿yj Sass do stylowania komponentów.
-* **Responsywnoœæ:** Aplikacja powinna byæ responsywna.
-* **B³¹d:** Obs³u¿ b³êdy, które mog¹ wyst¹piæ podczas wczytywania plików lub komunikacji z API.
+* **Stylowanie:** UÅ¼yj Sass do stylowania komponentÃ³w.
+* **ResponsywnoÅ›Ä‡:** Aplikacja powinna byÄ‡ responsywna.
+* **BÅ‚Ä™dy:** ObsÅ‚uÅ¼ bÅ‚Ä™dy, ktÃ³re mogÄ… wystÄ…piÄ‡ podczas wczytywania plikÃ³w lub komunikacji z API.
 
 ## Przydatne linki
 
 * [Obliczanie azymutu (AGH)](https://brasil.cel.agh.edu.pl/~11sjjurek/azymut.html)
 * [Dokumentacja OpenLayers](https://openlayers.org/en/latest/apidoc/)
+
+
+## Adnotacje
+
+### Interpretacja UTC+2 w modelu danych
+
+**Problem:**
+PostgreSQL z typem `timestamp with time zone` nie akceptuje DateTime z `Kind=Unspecified` (powstaje przy konwersji UTC na lokalny czas). 
+BÅ‚Ä…d: `Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported.`
+
+**RozwaÅ¼ane rozwiÄ…zania:**
+1. âŒ Konwersja na UTC+2 w Repository - powoduje bÅ‚Ä…d PostgreSQL
+2. âœ… Zapisywanie UTC w bazie (wybrane rozwiÄ…zanie)
+3. âš ï¸ Zmiana typu kolumny na `timestamp without time zone` - wymaga migracji, komplikuje operacje na datach
+
+**Implementacja:**
+- **W bazie:** przechowywany jest czas w UTC (`timestamp with time zone`)
+- **W kodzie:** `DateTime.UtcNow` zapisywany bezpoÅ›rednio bez konwersji
+- **Konwersja na UTC+2:** wykonywana w warstwie prezentacji (API response DTO) lub na frontendzie przy wyÅ›wietlaniu
+- **Zalety:** spÃ³jnoÅ›Ä‡ danych, zgodnoÅ›Ä‡ z PostgreSQL, uÅ‚atwione operacje na datach, obsÅ‚uga rÃ³Å¼nych stref czasowych

@@ -1,26 +1,26 @@
 ﻿# Plan Realizacji Zadania Rekrutacyjnego - Web Dev (GIS)
 
 ## Faza 1: Przygotowanie Środowiska
-- [ ] Uruchomienie bazy danych (PostgreSQL)
-- [ ] Inicjalizacja projektu Backend (.NET Web API)
-- [ ] Inicjalizacja projektu Frontend (React + TypeScript)
-- [ ] Instalacja wymaganych bibliotek (OpenLayers, SASS)
+- [x] Uruchomienie bazy danych (PostgreSQL)
+- [x] Inicjalizacja projektu Backend (.NET Web API)
+- [x] Inicjalizacja projektu Frontend (React + TypeScript)
+- [x] Instalacja wymaganych bibliotek (OpenLayers, SASS)
 
 ## Faza 2: Backend i Baza Danych
-- [ ] Konfiguracja Entity Framework i modelu danych
-- [ ] Wykonanie migracji bazy danych
-- [ ] Stworzenie endpointu API do zapisywania logów
-- [ ] Konfiguracja polityki CORS
+- [x] Konfiguracja Entity Framework i modelu danych
+- [x] Wykonanie migracji bazy danych
+- [x] Stworzenie endpointu API do zapisywania logów
+- [x] Konfiguracja polityki CORS
 
 ## Faza 3: Konfiguracja Mapy (Frontend)
-- [ ] Implementacja komponentu mapy OpenLayers
-- [ ] Ustawienie widoku startowego i warstwy kafelkowej
-- [ ] Wczytanie i wyświetlenie statycznego toru (GeoJSON)
+- [x] Implementacja komponentu mapy OpenLayers
+- [x] Ustawienie widoku startowego i warstwy kafelkowej
+- [x] Wczytanie i wyświetlenie statycznego toru (GeoJSON)
 
 ## Faza 4: Interfejs Użytkownika (UI)
-- [ ] Stworzenie układu strony (mapa + panel boczny)
-- [ ] Dodanie kontrolek sterujących (Start, Stop, Input opóźnienia)
-- [ ] Implementacja mechanizmu importu pliku z trasą
+- [x] Stworzenie układu strony (mapa + panel boczny)
+- [x] Dodanie kontrolek sterujących (Start, Stop, Input opóźnienia)
+- [x] Implementacja mechanizmu importu pliku z trasą
 
 ## Faza 5: Logika Animacji i Kolizji
 - [ ] Dodanie warstwy wektorowej dla pojazdu
@@ -34,11 +34,11 @@
 - [ ] Walidacja wczytywanych plików i blokada przycisków
 
 ## Faza 7: Stylowanie i Finalizacja
-- [ ] Stylowanie komponentów przy użyciu SASS
-- [ ] Poprawa responsywności interfejsu
+- [x] Stylowanie komponentów przy użyciu SASS
+- [x] Poprawa responsywności interfejsu
 - [ ] Refaktoryzacja kodu i usunięcie logów deweloperskich
 
 ## Zasoby Startowe
-- [ ] Plik toru (`raceTrack.json`)
-- [ ] Grafika pojazdu (`.svg`)
-- [ ] Przykładowy plik trasy do testów (GeoJSON)
+- [x] Plik toru (`raceTrack.json`)
+- [x] Grafika pojazdu (`fastRaceCar.svg`)
+- [x] Przykładowy plik trasy do testów (GeoJSON) (`lap1.json`, `lap2.json`)
