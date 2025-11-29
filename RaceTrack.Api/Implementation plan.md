@@ -23,20 +23,20 @@
 - [x] Implementacja mechanizmu importu pliku z trasą
 
 ## Faza 5: Logika Animacji i Kolizji
-- [ ] Dodanie warstwy wektorowej dla pojazdu
-- [ ] Implementacja pętli animacji ruchu po trasie
-- [ ] Obliczanie rotacji pojazdu względem trasy
-- [ ] Algorytm wykrywania wyjazdu poza tor
+- [x] Dodanie warstwy wektorowej dla pojazdu
+- [x] Implementacja pętli animacji ruchu po trasie
+- [x] Obliczanie rotacji pojazdu względem trasy
+- [x] Algorytm wykrywania wyjazdu poza tor
 
 ## Faza 6: Integracja i Obsługa Błędów
-- [ ] Wywołanie API w momencie wykrycia kolizji
-- [ ] Wyświetlanie powiadomień o zdarzeniach na ekranie
-- [ ] Walidacja wczytywanych plików i blokada przycisków
+- [x] Wywołanie API w momencie wykrycia kolizji
+- [x] Wyświetlanie powiadomień o zdarzeniach na ekranie
+- [x] Walidacja wczytywanych plików i blokada przycisków
 
 ## Faza 7: Stylowanie i Finalizacja
 - [x] Stylowanie komponentów przy użyciu SASS
 - [x] Poprawa responsywności interfejsu
-- [ ] Refaktoryzacja kodu i usunięcie logów deweloperskich
+- [x] Refaktoryzacja kodu i usunięcie logów deweloperskich
 
 ## Zasoby Startowe
 - [x] Plik toru (`raceTrack.json`)

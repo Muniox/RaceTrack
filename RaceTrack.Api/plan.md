@@ -71,17 +71,17 @@ Interakcja z użytkownikiem.
 ## Faza 5: Logika Biznesowa - Animacja i Kolizje
 Najtrudniejsza część - serce aplikacji.
 
-- [ ] Warstwa Auta:
+- [x] Warstwa Auta:
     - Dodaj nową warstwę wektorową dla auta.
     - Stwórz `Feature` (punkt) ze stylem `Icon` (`fastRaceCar.svg`).
-- [ ] Mechanizm Animacji:
+- [x] Mechanizm Animacji:
     - Użyj `useRef` do przechowywania aktualnego indeksu punktu trasy.
     - Użyj `useEffect` z `setInterval` (lub rekurencyjnego `setTimeout`), który uruchamia się po kliknięciu "Start".
     - W każdej klatce aktualizuj współrzędne `Feature` auta.
-- [ ] Obliczanie Rotacji:
+- [x] Obliczanie Rotacji:
     - Oblicz kąt między obecnym a następnym punktem (`Math.atan2`).
     - Zaktualizuj styl ikony, ustawiając `rotation`.
-- [ ] Detekcja Kolizji (W każdym kroku):
+- [x] Detekcja Kolizji (W każdym kroku):
     - Pobierz geometrię toru (Polygon).
     - Sprawdź `polygon.intersectsCoordinate(carPosition)`.
     - Jeśli `false` (poza torem) lub `true` (wewnątrz "dziury" toru - o ile tor ją ma) -> Trigger API.
@@ -91,10 +91,10 @@ Najtrudniejsza część - serce aplikacji.
 ## Faza 6: Integracja i Obsługa Błędów
 Łączenie klocków w całość.
 
-- [ ] API Call:
+- [x] API Call:
     - W momencie wykrycia błędu, wyślij `fetch` POST do swojego API.
     - Wyświetl powiadomienie (np. prosty `alert` lub customowy `Toast`) na ekranie.
-- [ ] Walidacja:
+- [x] Walidacja:
     - Zablokuj przycisk "Start", jeśli nie wczytano pliku trasy.
     - Obsłuż błąd, jeśli użytkownik wgra zły plik JSON.
 
@@ -103,12 +103,12 @@ Najtrudniejsza część - serce aplikacji.
 ## Faza 7: Stylowanie i Szlifowanie (Polish)
 Dbałość o detale.
 
-- [ ] Sass:
+- [x] Sass:
     - Przenieś style CSS do plików `.scss`.
     - Użyj zmiennych dla kolorów i fontów.
-- [ ] Responsywność:
+- [x] Responsywność:
     - Sprawdź, czy panel boczny nie zasłania mapy na telefonie.
-- [ ] Clean Code:
+- [x] Clean Code:
     - Usuń `console.log`.
 
 ---
